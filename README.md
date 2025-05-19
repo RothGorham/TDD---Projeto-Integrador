@@ -6,7 +6,7 @@
 1. Abra um terminal (Prompt de Comando ou PowerShell)
 2. Navegue até a pasta do projeto:
    ```bash
-   cd c:\Users\COCA\Downloads\tdd_example
+   cd c:?
    ```
 3. Instale as dependências:
    ```bash
