@@ -1,0 +1,21 @@
+{
+  "name": "tdd_example",
+  "version": "1.0.0",
+  "description": "Exemplo de TDD para sistema de perguntas e respostas",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "keywords": ["tdd", "jest", "testing"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}
