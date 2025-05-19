@@ -1,68 +1,94 @@
 # Sistema de Perguntas e Respostas com TDD
 
-## 🚀 Executando os testes rapidamente
+## 📋 Passo a passo para testar o projeto
 
-```bash
-# Instalar dependências
-npm install
-
-# Executar todos os testes
-npm test
-```
-
-## 👟 Passo a passo para executar o programa
-
-1. **Preparar o ambiente:**
+### Etapa 1: Preparação do ambiente
+1. Abra um terminal (Prompt de Comando ou PowerShell)
+2. Navegue até a pasta do projeto:
    ```bash
-   # Abra um terminal (Prompt de Comando ou PowerShell)
-   # Navegue até a pasta do projeto
    cd c:\Users\COCA\Downloads\tdd_example
    ```
-
-2. **Instalar dependências:**
+3. Instale as dependências:
    ```bash
    npm install
    ```
 
-3. **Iniciar o servidor:**
+### Etapa 2: Executar os testes automatizados
+
+**Para executar todos os testes:**
+```bash
+npm test
+```
+
+**Para executar apenas os testes do serviço:**
+```bash
+npx jest tests/perguntaService.test.js
+```
+
+**Para executar apenas os testes do controller:**
+```bash
+npx jest tests/perguntaController.test.js
+```
+
+### Etapa 3: Executar a aplicação
+
+1. Inicie o servidor:
    ```bash
    npm start
    ```
-   O servidor será iniciado na porta 3000.
-   
-   > **IMPORTANTE:** O aplicativo iniciará automaticamente no "modo de demonstração" sem necessidade de MongoDB. Não é preciso instalar ou configurar banco de dados.
-   > 
-   > **Se quiser conectar com banco de dados real:**
-   > ```bash
-   > # No Windows:
-   > set DEMO_MODE=false
-   > npm start
-   > 
-   > # No Linux/Mac:
-   > DEMO_MODE=false npm start
-   > ```
-   > 
-   > **Para usar MongoDB Atlas:**
-   > ```bash
-   > # No Windows:
-   > set DEMO_MODE=false
-   > set MONGO_URI=sua_string_de_conexao_do_atlas
-   > npm start
-   > 
-   > # No Linux/Mac:
-   > DEMO_MODE=false MONGO_URI=sua_string_de_conexao_do_atlas npm start
-   > ```
-   > 
-   > Substitua `sua_string_de_conexao_do_atlas` pela URL de conexão do MongoDB Atlas (formato: mongodb+srv://usuario:senha@cluster.mongodb.net/perguntas_respostas)
+   O servidor iniciará na porta 3000 em modo de demonstração (sem precisar de MongoDB).
 
-4. **Acessar a aplicação:**
+2. Acesse a aplicação:
    - Abra seu navegador e acesse: `http://localhost:3000`
-   - Para testar a API diretamente:
-     - Obter pergunta: GET `http://localhost:3000/api/pergunta`
-     - Enviar resposta: POST `http://localhost:3000/api/resposta` com corpo `{"id": 1, "resposta": "sua resposta"}`
 
-5. **Encerrar o servidor:**
+3. Para encerrar o servidor:
    - Volte ao terminal e pressione `Ctrl+C`
+
+### Etapa 4: Testar a API diretamente
+
+1. Com o servidor iniciado (`npm start`), você pode:
+
+   - **Obter uma pergunta aleatória:**
+     ```
+     Método: GET
+     URL: http://localhost:3000/api/pergunta
+     ```
+     Resposta esperada: JSON com a pergunta, opções e ID
+
+   - **Verificar uma resposta:**
+     ```
+     Método: POST
+     URL: http://localhost:3000/api/resposta
+     Corpo (JSON): {"id": "1", "resposta": "Teste"}
+     ```
+     Resposta esperada: JSON informando se a resposta está correta
+
+## ⚙️ Configurações opcionais
+
+> **IMPORTANTE:** O aplicativo inicia automaticamente no "modo de demonstração" sem necessidade de MongoDB.
+> 
+> **Para usar um banco de dados local:**
+> ```bash
+> # No Windows:
+> set DEMO_MODE=false
+> npm start
+> 
+> # No Linux/Mac:
+> DEMO_MODE=false npm start
+> ```
+> 
+> **Para usar MongoDB Atlas:**
+> ```bash
+> # No Windows:
+> set DEMO_MODE=false
+> set MONGO_URI=sua_string_de_conexao_do_atlas
+> npm start
+> 
+> # No Linux/Mac:
+> DEMO_MODE=false MONGO_URI=sua_string_de_conexao_do_atlas npm start
+> ```
+> 
+> Substitua `sua_string_de_conexao_do_atlas` pela URL de conexão do MongoDB Atlas.
 
 ## ✅ O que este projeto demonstra
 
