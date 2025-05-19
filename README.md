@@ -63,33 +63,6 @@ npx jest tests/perguntaController.test.js
      ```
      Resposta esperada: JSON informando se a resposta está correta
 
-## ⚙️ Configurações opcionais
-
-> **IMPORTANTE:** O aplicativo inicia automaticamente no "modo de demonstração" sem necessidade de MongoDB.
-> 
-> **Para usar um banco de dados local:**
-> ```bash
-> # No Windows:
-> set DEMO_MODE=false
-> npm start
-> 
-> # No Linux/Mac:
-> DEMO_MODE=false npm start
-> ```
-> 
-> **Para usar MongoDB Atlas:**
-> ```bash
-> # No Windows:
-> set DEMO_MODE=false
-> set MONGO_URI=sua_string_de_conexao_do_atlas
-> npm start
-> 
-> # No Linux/Mac:
-> DEMO_MODE=false MONGO_URI=sua_string_de_conexao_do_atlas npm start
-> ```
-> 
-> Substitua `sua_string_de_conexao_do_atlas` pela URL de conexão do MongoDB Atlas.
-
 ## ✅ O que este projeto demonstra
 
 Este projeto demonstra uma implementação de Test-Driven Development (TDD) para um sistema de perguntas e respostas, mostrando:
